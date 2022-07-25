@@ -1,13 +1,9 @@
-# demo
+# API test
 
 ### Reference Documentation
-Xml SOAP services to consume JSON Poke Api:
-	
-	- https://pokeapi.co/api/v2/pokemon/{pokemon}/ 
 
-## Wsdl
-
-	- http://localhost:8080/soap/pokeapi.wsdl
+	- https://gnews.io/api/v4/top-headlines?token=680490ee7d77d05f2d84488515a298d3&lang=es
+	- https://gnews.io/api/v4/search?q=oregon&token=680490ee7d77d05f2d84488515a298d3&lang=en&from=2022-07-24T01:59:57Z&to=2022-07-24T22:59:57Z
 	
 ## Endpoints
 
