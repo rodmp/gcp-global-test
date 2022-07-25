@@ -40,10 +40,19 @@ public class SearchNewsProcessor
     SearchNews searchNews = searchOpt.orElseThrow(() -> new DataNotFoundException());
 
     if (!topTenRequest.getOrderBy().isEmpty()) {
+
+      Comparator<Article> comparing = null;
+
+
+      if (topTenRequest.getOrderBy().equalsIgnoreCase("desc")) {
+        comparing = Comparator.comparing(Article::getPublishedAt).reversed();
+      } else if (topTenRequest.getOrderBy().equalsIgnoreCase("asc")) {
+        comparing = Comparator.comparing(Article::getPublishedAt);
+      }
+
       return SearchNewsResponse.builder()
-          .articles(searchNews.getArticles().stream()
-              .sorted(Comparator.comparing(Article::getPublishedAt).reversed())
-              .collect(Collectors.toList()))
+          .articles(
+              searchNews.getArticles().stream().sorted(comparing).collect(Collectors.toList()))
           .build();
     }
 

@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Objects;
 import javax.naming.ServiceUnavailableException;
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.ConstraintViolationException;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -200,9 +200,10 @@ public class ErrorResolver {
 
   }
 
-  @ExceptionHandler(ConstraintViolationException.class)
+  @ExceptionHandler(MethodArgumentNotValidException.class)
   @ResponseStatus(value = HttpStatus.NOT_FOUND)
-  public ErrorResponse resolveException(HttpServletRequest req, ConstraintViolationException ex) {
+  public ErrorResponse resolveException(HttpServletRequest req,
+      MethodArgumentNotValidException ex) {
 
     ErrorResponse errorResponse = new ErrorResponse();
 
@@ -210,10 +211,10 @@ public class ErrorResolver {
     errorResponse.setCode(errorResolverConstants.getGenericErrorCode());
 
     List<String> violationMessages = new ArrayList<String>();
-    ex.getConstraintViolations()
-        .forEach(violation -> violationMessages.add(violation.getMessage()));
+    ex.getFieldErrors().forEach(violation -> violationMessages
+        .add(violation.getField().concat("-").concat(violation.getDefaultMessage())));
 
-    errorResponse.setDetails( String.join(",", violationMessages));
+    errorResponse.setDetails(String.join(",", violationMessages));
     errorResponse.setLocation(req.getRequestURI());
     errorResponse.setTimestamp(ZonedDateTime.now());
 

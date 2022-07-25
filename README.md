@@ -15,6 +15,9 @@ Return most relevant news by country code.
 
 	- /most/relevant
 
+Swagger
+
+	- http://localhost:8080/swagger-ui/index.html
 
 ## Instalation
 
