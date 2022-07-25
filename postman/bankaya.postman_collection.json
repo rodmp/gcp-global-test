@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "48287dff-911d-4375-8ee4-2cc2ac5f0f45",
+		"name": "bankaya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3133582"
+	},
+	"item": [
+		{
+			"name": "getPokeApi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getPokeApi.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAbilities",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getAbilities.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBaseExperience",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getBaseExperience.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHeldItems",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getHeldItems.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getId.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getName",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getName.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLocationAreaEncounters",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/rodo_/OneDrive/Documentos/bancaya/getLocationAreaEncounters.xml"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/soap",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soap"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

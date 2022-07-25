@@ -1,0 +1,20 @@
+        <ns2:getAbilitiesResponse xmlns:ns2="http://www.pokeapi.com/soap/generation">
+            <ns2:abilities>
+                <ns2:AbilityResource>
+                    <ns2:Ability>
+                        <ns2:name>overgrow</ns2:name>
+                        <ns2:url>https://pokeapi.co/api/v2/ability/65/</ns2:url>
+                    </ns2:Ability>
+                    <ns2:is_hidden>false</ns2:is_hidden>
+                    <ns2:slot>1</ns2:slot>
+                </ns2:AbilityResource>
+                <ns2:AbilityResource>
+                    <ns2:Ability>
+                        <ns2:name>chlorophyll</ns2:name>
+                        <ns2:url>https://pokeapi.co/api/v2/ability/34/</ns2:url>
+                    </ns2:Ability>
+                    <ns2:is_hidden>true</ns2:is_hidden>
+                    <ns2:slot>3</ns2:slot>
+                </ns2:AbilityResource>
+            </ns2:abilities>
+        </ns2:getAbilitiesResponse>

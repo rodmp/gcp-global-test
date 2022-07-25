@@ -1,0 +1,3 @@
+        <ns2:getLocationAreaEncountersResponse xmlns:ns2="http://www.pokeapi.com/soap/generation">
+            <ns2:location_areas>https://pokeapi.co/api/v2/pokemon/7/encounters</ns2:location_areas>
+        </ns2:getLocationAreaEncountersResponse>
