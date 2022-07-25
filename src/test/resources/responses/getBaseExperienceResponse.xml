@@ -1,3 +1,0 @@
-        <ns2:getBaseExperienceResponse xmlns:ns2="http://www.pokeapi.com/soap/generation">
-            <ns2:base_experience>72</ns2:base_experience>
-        </ns2:getBaseExperienceResponse>

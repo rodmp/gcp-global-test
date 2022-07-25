@@ -1,9 +1,0 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:gs="http://www.pokeapi.com/soap/generation">
-    <soapenv:Header/>
-    <soapenv:Body>
-        <gs:getId>
-            <gs:name>bulbasaur</gs:name>
-        </gs:getId>
-    </soapenv:Body>
-</soapenv:Envelope>

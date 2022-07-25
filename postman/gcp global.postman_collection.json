@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "4a93fed4-9713-45f8-87c9-9ff929975cb8",
+		"name": "gcp global",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3133582"
+	},
+	"item": [
+		{
+			"name": "most relevant",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "top ten",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/public/v1.0.0/news/most/relevant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"v1.0.0",
+						"news",
+						"most",
+						"relevant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
