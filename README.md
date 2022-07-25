@@ -7,33 +7,14 @@
 	
 ## Endpoints
 
-Return all json response in XML format by pokemon name.
+Return top ten news filter by, content, title, description and from, to dates
 
-	- getPokeAPI
+	- /top/ten/articles
 	
-Return abilities in XML format by pokemon name.	
+Return most relevant news by country code.	
 
-	- getAbilities
+	- /most/relevant
 
-Return base experience data in XML format by pokemon name.	
-	
-	- getBaseExperience
-
-Return held items data in XML format by pokemon name.	
-	
-	- getHeldItems
-	
-Return id in XML format by pokemon name.		
-
-	- getId
-
-Return name in XML format by pokemon name.	
-	
-	- getName
-
-Return location area encounters in XML format by pokemon name.	
-	
-	- getLocationAreaEncounters
 
 ## Instalation
 
@@ -42,8 +23,6 @@ Return location area encounters in XML format by pokemon name.
 	jdk 8
 	
 ### compilation
-
-Compile model Xml class and generate WSDL
 
 	- mvn compile
 	
@@ -58,11 +37,5 @@ Compile model Xml class and generate WSDL
 	
 ## Postman
 
-	- postman folder contains some examples and collection
-	
-## H2 database
-
-	- url: http://localhost:8080/h2-console
-	- user: poke password:pass
-	
+	- postman folder contains some examples and collection	
 
