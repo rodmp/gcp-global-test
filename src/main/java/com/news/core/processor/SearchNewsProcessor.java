@@ -31,10 +31,11 @@ public class SearchNewsProcessor
   public SearchNewsResponse execute(TopTenCommand request) {
 
     TopTenNewsRequest topTenRequest = request.getRequest();
-    
+
     Optional<SearchNews> searchOpt =
-        Optional.ofNullable(feignClient.searchNews(topTenRequest.getContent(), properties.getTokenApi(),
-            properties.getLanguage(), topTenRequest.getFrom(), topTenRequest.getTo()));
+        Optional.ofNullable(feignClient.searchNews(topTenRequest.getContent(),
+            properties.getTokenApi(), properties.getLanguage(), topTenRequest.getFrom(),
+            topTenRequest.getTo(), topTenRequest.getTitle()));
 
     SearchNews searchNews = searchOpt.orElseThrow(() -> new DataNotFoundException());
 

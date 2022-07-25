@@ -39,18 +39,23 @@ public class MostRelevantNewsProcessor
 
   private CountryArticle mapArticleByCountry(String country) {
 
+    CountryArticle article = CountryArticle.builder().country(country).build();
+    
     Optional<SearchNews> searchOpt = Optional
         .ofNullable(feignClient.getTopHeadLineByLanguague(properties.getTokenApi(), country));
 
     if (!searchOpt.isPresent()) {
-      return CountryArticle.builder().country(country).build();
+      return article;
     }
 
-    Article article = searchOpt.get().getArticles().stream()
-        .sorted(Comparator.comparing(Article::getPublishedAt).reversed()).findFirst().get();
+    Optional<Article> articleOpt = searchOpt.get().getArticles().stream()
+        .sorted(Comparator.comparing(Article::getPublishedAt).reversed()).findFirst();
 
-
-    return CountryArticle.builder().country(country).article(article).build();
+    if (!articleOpt.isPresent()) {
+      return article;
+    }
+        
+    return CountryArticle.builder().country(country).article(articleOpt.get()).build();
   }
 
 }

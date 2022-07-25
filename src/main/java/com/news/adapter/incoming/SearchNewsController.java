@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.news.adapter.model.MostRelevantNewsResponse;
@@ -19,7 +20,6 @@ import com.news.port.command.TopTenCommand;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
-@RequestMapping()
+@RequestMapping("/api/public/v1.0.0/news")
 @RestController
 public class SearchNewsController {
 
@@ -68,7 +68,7 @@ public class SearchNewsController {
 
   @PostMapping("/top/ten/articles")
   public ResponseEntity<SearchNewsResponse> topTenNewsEndpoint(
-      @Valid @RequestBody TopTenNewsRequest topTenNewsRequest) {
+      @RequestBody @Valid TopTenNewsRequest topTenNewsRequest) {
 
     log.info("New request top ten search {} ", topTenNewsRequest);
     
